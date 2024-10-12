@@ -1,0 +1,9 @@
+loguru~=0.7.2
+python-dotenv==1.0.1
+python-binance~=1.0.19
+numpy~=2.1.1
+fastapi~=0.115.0
+uvicorn~=0.31.0
+typing_extensions~=4.12.2
+gunicorn~=23.0.0
+pydantic~=2.9.2
