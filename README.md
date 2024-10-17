@@ -1,14 +1,14 @@
-# HotCold
+# 🔥 HotCold ❄️
 
 Binance Futures symbol lookup tool
 
-## Usage examples
+[👉 Ukrainian version](README_uk.md)
 
-### Simple mode
+## Usage examples
 
 Use this mode to quickly check what symbols got an unexpected boost 🐳.
 
-Example. Give TOP symbols that changed the most in the last **40 minutes**
+🎩Example. Give TOP symbols that changed the most in the last **40 minutes**
 
 ```bash
 python hotcold.py 40m
@@ -20,7 +20,7 @@ python hotcold.py 40m
 
 Use this mode to see what's going on in the market 📈 and find interesting symbols to trade.
 
-Example. Give TOP symbols, compare the price on last 20 minutes with the price on last 8 hours and last 3 days
+🎩 Example. Give TOP symbols, compare the price on last **20 minutes** with the price on last **8 hours** and last **3 days**
 
 ```bash
 python hotcold.py 20m 4h 2d
@@ -30,7 +30,7 @@ python hotcold.py 20m 4h 2d
 
 ## Installation
 
-1. Make sure python and is installed on your machine
+1. Make sure python is installed on your machine
 
 Example of installation on Ubuntu Linux:
 ```bash
@@ -42,11 +42,12 @@ Example of installation on Android (Termux):
 pkg update && pkg upgrade -y && pkg install -y python
 ```
 
-2. Download the script to your machine
+2. Download the script to your machine<br>
 
 ```bash
 # Download the script form the repository
 curl -O https://raw.githubusercontent.com/asidko/binance-hotcold/main/hotcold.py
+# ☝️ Repeat this command later if you want to update the script to a newer version
 ```
 
 3. Install required python packages
