@@ -6,6 +6,8 @@ Binance Futures symbol lookup tool
 
 ## Usage examples
 
+### Simple mode
+
 Use this mode to quickly check what symbols got an unexpected boost 🐳.
 
 🎩Example. Give TOP symbols that changed the most in the last **40 minutes**
