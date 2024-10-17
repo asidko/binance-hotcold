@@ -23,7 +23,7 @@ Use this mode to see what's going on in the market 📈 and find interesting sym
 🎩 Example. Give TOP symbols, compare the price on last **20 minutes** with the price on last **8 hours** and last **3 days**
 
 ```bash
-python hotcold.py 20m 4h 2d
+python hotcold.py 20m 4h 3d
 ```
 
 <img width="730" alt="image" src="https://github.com/user-attachments/assets/916a9d43-5c0e-4784-94ad-462b63d7af3a">
@@ -88,7 +88,9 @@ Increases the number of symbols to show (for both categories). Default is to sho
 
 Example: `python hotcold.py 15m 1d 5d --no-spikes`
 
-Ignores symbols with unexpected spikes of price
+Ignores symbols with unexpected spikes of price.
+
+⚠️ Significantly affects the search results. Use only if necessary.
 
 Use it if you don't want to see symbols like this
 
@@ -97,3 +99,17 @@ Use it if you don't want to see symbols like this
 And rather interested in more evenly distributed charts like this
 
 <img width="671" alt="image" src="https://github.com/user-attachments/assets/56eb84ce-274e-4c24-9ea6-d56415656023">
+
+Additionally, you can specify a threshold to filter the unstable coins. 
+For example, to ignore all symbols with a price spike of more than 3% in the last 2 days , use the following command:
+
+```bash
+# Find the most stable symbols
+python hotcold.py 15m 2h 2d --no-spikes --spike-threshold=3%
+``` 
+
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/f08b2d5f-ba30-4613-be1f-5e8c847597de">
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details

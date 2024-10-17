@@ -1,4 +1,5 @@
 import asyncio
+import sys
 from statistics import median, mean
 
 import aiohttp
@@ -461,7 +462,7 @@ if __name__ == '__main__':
     parser.add_argument('big_interval', nargs='?', default=SENTINEL, help='Big interval (e.g., 4h, 1d)')
     parser.add_argument('--simple', action='store_true',    help='Simple mode, compare last price with time interval')
     parser.add_argument('--watch', action='store_true', help='Continuous monitoring mode')
-    parser.add_argument('--no-spikes', action='store_true',   help="Don't show symbols if they have spike more than given % threshold")
+    parser.add_argument('--no-spikes', action='store_true',   help="Don't show symbols if they have spike more than given threshold")
     parser.add_argument('--spike-threshold', type=str, default='5%', help='Threshold for spike detection')
     parser.add_argument('--interval', type=float, default=30.0, help='Update interval in seconds')
     parser.add_argument('--count', type=int, default=5, help='Number of symbols to display in each category')
