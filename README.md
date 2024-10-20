@@ -78,7 +78,7 @@ Example: `python hotcold.py 3m 1h 8h --watch`
 
 Automatically request new data every 30 seconds and show it
 
-You can change the interval by passing `--interval=300` (in seconds) to request data every 5 minutes
+You can change the interval by passing `--wait=300` (in seconds) to request data every 5 minutes
 
 ### --count
 

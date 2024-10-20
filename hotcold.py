@@ -386,7 +386,7 @@ async def main(args: argparse.Namespace):
             with Progress(
                     TextColumn("[progress.description]{task.description}"),
                     BarColumn(),
-                    "[progress.percentage]{task.percentage:>3.0f}%",
+                    "[progress.percentage]{task.percentage:>1.0f}%",
                     TimeRemainingColumn(),
                     console=console
             ) as progress:
@@ -444,7 +444,7 @@ async def main(args: argparse.Namespace):
             if not args.watch:
                 break
 
-            await asyncio.sleep(args.interval)
+            await asyncio.sleep(args.wait)
 
 
 if __name__ == '__main__':
@@ -464,7 +464,7 @@ if __name__ == '__main__':
     parser.add_argument('--watch', action='store_true', help='Continuous monitoring mode')
     parser.add_argument('--no-spikes', action='store_true',   help="Don't show symbols if they have spike more than given threshold")
     parser.add_argument('--spike-threshold', type=str, default='5%', help='Threshold for spike detection')
-    parser.add_argument('--interval', type=float, default=30.0, help='Update interval in seconds')
+    parser.add_argument('--wait', type=float, default=30.0, help='Update interval in seconds')
     parser.add_argument('--count', type=int, default=5, help='Number of symbols to display in each category')
 
     args = parser.parse_args()
